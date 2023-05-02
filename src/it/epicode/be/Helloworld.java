@@ -8,18 +8,18 @@ public static void main (String[] args)
 		{
 		// Stampa a console  la frase
 		System.out.println("This is my first Epicode Java Project!");
-		System.out.println("Moltiplica 3 e 5");
+		System.out.println("///Moltiplica 3 e 5///");
 		System.out.println(Moltiplica(3,5));
-		System.out.println("Concatena 'wow' e 5");
+		System.out.println("///Concatena 'wow' e 5///");
 		System.out.println(Concatena("wow",5));
-		System.out.println("Inserisci in Array");
+		System.out.println("///Inserisci in Array///");
 		String[] arr = {"a","e","i","o","u"} ;
-		System.out.println(InserisciInArray(arr, "ciao"));
+		InserisciInArray(arr, "ciao");
 		System.out.println("///GetWords///");
 		System.out.println(GetWords());
 		System.out.println("///Perimetro del rettangolo///");
 		System.out.println(PerimetroRettangolo());
-		System.out.println("Verifica un numero (Dispari = 1, Pari = 0)");
+		System.out.println("///Verifica un numero (Dispari = 1, Pari = 0)///");
 		PariDispari();
 		System.out.println("///Area del triangolo///");
 		AreaTriangolo();
@@ -34,19 +34,20 @@ public static void main (String[] args)
 		}
 
 	
-		static String[] InserisciInArray(String[] arr, String def) {
-			arr = new String[6];
+		static void InserisciInArray(String[] arr, String def) {
+			String[] result = new String[6];
 			String iii = arr[2];
 			String iv = arr[3];
 			String v = arr[4];
-			arr[2] = def;
-			arr[3] = iii;
-			arr[4] = iv;
-			arr[5] = v;
-			for (int i = 0; i<arr.length; i++) {
-				System.out.println(arr[i]);
+			result[0] = arr[0];
+			result[1] = arr[1];
+			result[2] = def;
+			result[3] = iii;
+			result[4] = iv;
+			result[5] = v;
+			for (int i = 0; i<result.length; i++) {
+				System.out.println(result[i]);
 			}
-			return arr;
 		}
 		
 		static String GetWords() {
